@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page-Level Features Associated with Google Search Rankings</title>
+  <style>
+    :root { --ink:#172033; --muted:#5c677d; --accent:#2563eb; --card:#ffffff; --bg:#f4f7fb; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter, Arial, sans-serif; background:var(--bg); color:var(--ink); line-height:1.7; }
+    main { max-width:900px; margin:40px auto; background:var(--card); padding:56px; border-radius:18px; box-shadow:0 10px 35px rgba(23,32,51,.08); }
+    h1 { font-size:2.5rem; line-height:1.15; margin-bottom:12px; }
+    h2 { margin-top:36px; border-bottom:1px solid #e5e7eb; padding-bottom:8px; }
+    .subtitle { color:var(--muted); font-size:1.05rem; }
+    .callout { background:#eef4ff; border-left:4px solid var(--accent); padding:16px 18px; margin:24px 0; border-radius:8px; }
+    code { background:#f1f5f9; padding:2px 6px; border-radius:5px; }
+    ol, ul { padding-left:24px; }
+    a { color:var(--accent); }
+    footer { margin-top:46px; color:var(--muted); font-size:.92rem; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Page-Level Features Associated with Google Search Rankings</h1>
+  <p class="subtitle">Google Search Ranking & Discoverability Capstone</p>
+
+  <div class="callout">
+    <strong>Research question:</strong> Which page-level features are most associated with stronger Google search rankings?
+  </div>
+
+  <h2>Abstract</h2>
+  <p>
+    This study investigates which page-level content and structural features are associated with stronger Google search rankings.
+    Using the provided warehouse dataset, the analysis evaluates available numerical features such as content length, title length,
+    headings, internal links, and other measurable page characteristics. The workflow combines data cleaning, correlation analysis,
+    and a Random Forest model to identify features most strongly associated with search position. The findings are intended to support
+    repeatable SEO prioritization and should be interpreted as associations rather than proof of causation.
+  </p>
+
+  <h2>Introduction and Problem Statement</h2>
+  <p>
+    SEO teams often need to decide which pages deserve attention first and which measurable page characteristics are linked with better
+    organic visibility. This capstone builds a repeatable analysis that ranks page-level signals by their relationship with search position.
+    The goal is not to claim that any single feature causes a ranking increase, but to identify useful patterns that can guide testing and
+    content improvement decisions.
+  </p>
+
+  <h2>Data</h2>
+  <p>
+    The analysis uses the approved FlyRank warehouse dataset supplied for the capstone. Before publication, sensitive information such as
+    client names, private URLs, credentials, private queries, and confidential raw exports must be excluded from the public repository.
+  </p>
+
+  <h2>Methodology</h2>
+  <ol>
+    <li>Load the approved CSV or Parquet dataset.</li>
+    <li>Identify the search-position target column.</li>
+    <li>Select numerical page-level features and remove unusable or highly incomplete fields.</li>
+    <li>Clean missing values using median imputation.</li>
+    <li>Calculate correlations with ranking position.</li>
+    <li>Train a Random Forest regressor as a repeatable baseline model.</li>
+    <li>Rank features using model feature importance.</li>
+  </ol>
+
+  <h2>Results</h2>
+  <p>
+    <strong>Replace this paragraph after running the notebook.</strong>
+    Paste the actual top-ranked features, model metrics, and observations printed by
+    <code>notebooks/capstone_analysis.ipynb</code>. Do not invent results.
+  </p>
+
+  <h2>Ranked Recommendations</h2>
+  <ol>
+    <li>Prioritize pages where the strongest observed feature gaps coincide with weak search positions.</li>
+    <li>Improve internal linking where the dataset shows a meaningful association with stronger rankings.</li>
+    <li>Strengthen thin or structurally weak pages only when supported by the observed feature rankings.</li>
+    <li>Test recommendations incrementally and measure changes over time rather than assuming causation.</li>
+  </ol>
+
+  <h2>Limitations</h2>
+  <p>
+    Search rankings are influenced by many factors that may not be present in the dataset, including backlinks, competition, search intent,
+    technical health, freshness, brand signals, and algorithmic changes. Correlation and model importance do not establish causation.
+    Results may also depend on the quality, coverage, and time period of the available data.
+  </p>
+
+  <h2>Reproducibility</h2>
+  <p>
+    The full analysis workflow is included in the project notebook. To reproduce the results, place the approved dataset in the
+    <code>data/</code> folder, update the notebook's <code>DATA_PATH</code>, and run all cells.
+  </p>
+
+  <h2>Acknowledgements and Data Credit</h2>
+  <p>
+    Built using the FlyRank ML Internship dataset and course resources provided for the Google Search Ranking & Discoverability Capstone.
+  </p>
+
+  <footer>
+    Capstone research paper. Replace all placeholder result text with outputs from the real approved dataset before final submission.
+  </footer>
+</main>
+</body>
+</html>
