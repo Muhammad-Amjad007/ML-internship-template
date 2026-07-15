@@ -1,2 +1,1 @@
-REPLACE_WITH_YOUR_DEPLOYED_GITHUB_PAGES_URL
-Example: https://yourusername.github.io/google-search-ranking-capstone/
+https://muhammad-amjad007.github.io/ML-internship-template/
